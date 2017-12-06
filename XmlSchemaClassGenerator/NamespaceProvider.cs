@@ -134,7 +134,7 @@ namespace XmlSchemaClassGenerator
             return ((System.Collections.IEnumerable)InternalDictionary).GetEnumerator();
         }
 
-        public string FindNamespace(NamespaceKey key, string defaultNamespace = null)
+        public string FindNamespace(NamespaceKey key, string defaultNamespace = "Default")
         {
             var keyValues = new List<NamespaceKey>
 	        {

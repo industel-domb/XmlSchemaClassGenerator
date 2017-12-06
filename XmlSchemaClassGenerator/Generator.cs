@@ -216,6 +216,12 @@ namespace XmlSchemaClassGenerator
                     provider.GenerateCodeFromCompileUnit(compileUnit, sw, new CodeGeneratorOptions { VerbatimOrder = true, BracingStyle = "C" });
                     var s = sw.ToString().Replace("};", "}"); // remove ';' at end of automatic properties
                     var path = Path.Combine(OutputFolder, ns.Name + ".cs");
+
+                    if (!Directory.Exists(OutputFolder))
+                    {
+                        Directory.CreateDirectory(OutputFolder);
+                    }
+
                     Log?.Invoke(path); File.WriteAllText(path, s);
                 }
             }

@@ -35,7 +35,8 @@
         /// <returns>Name of the property</returns>
         public virtual string PropertyNameFromElement(string typeModelName, string elementName)
         {
-            return typeModelName.ToTitleCase(_namingScheme) + elementName.ToTitleCase(_namingScheme);
+            //DBa Change
+            return /*typeModelName.ToTitleCase(_namingScheme) +*/ elementName.ToTitleCase(_namingScheme);
         }
 
         /// <summary>
